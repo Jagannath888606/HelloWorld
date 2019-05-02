@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="mathsobjectvalue" class="com.bl.objects.MathsSubject"></bean>
+<bean id="student1" class="com.bl.objects.Student">
+<property name="id" value="305"/>
+<property name="maths" ref="mathsobjectvalue">
+<!-- <bean class="com.bl.objects.MathsSubject"></bean> -->
+</property>
+</bean>
+<bean id="student2" class="com.bl.objects.AnotherStudent">
+<property name="mathsSub" ref="mathsobjectvalue">
+<!-- <bean class="com.bl.objects.MathsSubject"></bean> -->
+</property>
+</bean>
+</beans>
